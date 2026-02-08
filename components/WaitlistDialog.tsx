@@ -21,8 +21,14 @@ export default function WaitlistDialog({ isOpen, onClose }: WaitlistDialogProps)
     setSubmitStatus('idle')
 
     try {
-      // Replace with your n8n webhook URL
-      const webhookUrl = 'YOUR_N8N_WEBHOOK_URL_HERE'
+      const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL
+      
+      if (!webhookUrl) {
+        console.error('N8N webhook URL is not configured')
+        setSubmitStatus('error')
+        setIsSubmitting(false)
+        return
+      }
       
       const response = await fetch(webhookUrl, {
         method: 'POST',

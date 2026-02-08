@@ -65,7 +65,7 @@ export default function WaitlistDialog({ isOpen, onClose }: WaitlistDialogProps)
       />
       
       {/* Dialog */}
-      <div className="relative bg-black/90 border border-zinc-700/50 rounded-2xl p-8 max-w-md w-full shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+      <div className="relative bg-black/90 border border-zinc-700/50 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-[0_0_50px_rgba(255,255,255,0.1)] mx-4">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -77,10 +77,10 @@ export default function WaitlistDialog({ isOpen, onClose }: WaitlistDialogProps)
         {/* Content */}
         <div className="space-y-6">
           <div className="text-center space-y-2">
-            <h2 className="text-3xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">
               Join the Waitlist
             </h2>
-            <p className="text-white/60 text-sm">
+            <p className="text-white/60 text-xs sm:text-sm">
               Be the first to know when we launch
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function WaitlistDialog({ isOpen, onClose }: WaitlistDialogProps)
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full px-6 py-3 bg-white text-zinc-900 font-semibold rounded-lg hover:bg-zinc-100 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-6 py-2.5 sm:py-3 bg-white text-zinc-900 font-semibold text-sm sm:text-base rounded-lg hover:bg-zinc-100 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>

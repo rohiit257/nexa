@@ -19,14 +19,14 @@ export default function Home() {
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center h-screen px-4">
-        <div className="flex flex-col items-center space-y-10 max-w-4xl w-full">
+        <div className="flex flex-col items-center space-y-6 sm:space-y-8 md:space-y-10 max-w-4xl w-full px-2 sm:px-4">
           
           {/* Coming Soon Typography */}
-          <div className="text-center space-y-4">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white tracking-tight">
+          <div className="text-center space-y-2 sm:space-y-4">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-white tracking-tight leading-tight">
               Coming Soon
             </h1>
-            <p className="text-lg md:text-xl text-zinc-400 font-light tracking-wide">
+            <p className="text-base sm:text-lg md:text-xl text-zinc-400 font-light tracking-wide px-4">
               Something extraordinary is launching
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function Home() {
           {/* Join Waitlist Button */}
           <button
             onClick={() => setIsDialogOpen(true)}
-            className="px-8 py-4 bg-white text-zinc-900 font-semibold text-lg rounded-full hover:bg-zinc-100 transition-all duration-200"
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-zinc-900 font-semibold text-base sm:text-lg rounded-full hover:bg-zinc-100 transition-all duration-200 w-auto min-w-[200px]"
           >
             Join the Waitlist
           </button>

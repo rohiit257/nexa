@@ -54,19 +54,19 @@ export default function CountdownTimer() {
   ]
 
   return (
-    <div className="flex gap-3 md:gap-4">
+    <div className="flex gap-2 sm:gap-3 md:gap-4">
       {timeUnits.map((unit, index) => (
-        <div key={unit.label} className="flex items-center gap-3 md:gap-4">
+        <div key={unit.label} className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-white tabular-nums">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tabular-nums">
               {String(unit.value).padStart(2, '0')}
             </div>
-            <div className="text-xs md:text-sm text-zinc-500 uppercase tracking-wider font-light mt-1">
+            <div className="text-[10px] sm:text-xs md:text-sm text-zinc-500 uppercase tracking-wider font-light mt-0.5 sm:mt-1">
               {unit.label}
             </div>
           </div>
           {index < timeUnits.length - 1 && (
-            <div className="text-3xl md:text-4xl text-zinc-600 font-light">:</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl text-zinc-600 font-light">:</div>
           )}
         </div>
       ))}

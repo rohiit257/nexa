@@ -10,6 +10,12 @@
   },
   "dependencies": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    "@neondatabase/serverless": "^0.9.3",
+    "@vercel/analytics": "^1.6.1",
+    "bcryptjs": "^2.4.3",
+>>>>>>> Stashed changes
 =======
     "@neondatabase/serverless": "^0.9.3",
     "@vercel/analytics": "^1.6.1",
